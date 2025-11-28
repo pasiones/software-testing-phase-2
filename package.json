@@ -6,7 +6,7 @@
     "mocha": "^11.7.5"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test-suite/*.test.js",
     "test:coverage": "c8 mocha",
     "test:watch": "mocha --watch",
     "coverage": "c8 mocha && c8 report --reporter=text-lcov | coveralls"
