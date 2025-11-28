@@ -7,8 +7,8 @@
   },
   "scripts": {
     "test": "mocha test-suite/*.test.js",
-    "test:coverage": "c8 mocha",
-    "test:watch": "mocha --watch",
-    "coverage": "c8 mocha && c8 report --reporter=text-lcov | coveralls"
+    "test:coverage": "c8 mocha test-suite/*.test.js",
+    "test:watch": "mocha --watch test-suite/*.test.js",
+    "coverage": "c8 mocha test-suite/*.test.js && c8 report --reporter=text-lcov | coveralls"
   }
 }
