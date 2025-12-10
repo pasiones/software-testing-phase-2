@@ -5,7 +5,7 @@ describe('add', () => {
   describe('Basic Addition', () => {
     it('should add two positive numbers', () => {
       expect(add(6, 4)).to.equal(10)
-    })
+    })  
 
     it('should add two negative numbers', () => {
       expect(add(-5, -3)).to.equal(-8)
