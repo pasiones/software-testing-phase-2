@@ -10,6 +10,6 @@
     "test": "mocha test-suite/*.test.js",
     "test:coverage": "c8 mocha test-suite/*.test.js",
     "test:watch": "mocha --watch test-suite/*.test.js",
-    "coverage": "c8 mocha test-suite/*.test.js && c8 report --reporter=text-lcov | coveralls"
+    "coverage:report": "c8 report --reporter=text-lcov | coveralls"
   }
 }
