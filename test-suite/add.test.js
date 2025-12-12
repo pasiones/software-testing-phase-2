@@ -13,19 +13,19 @@ describe('add', () => {
   })
 
   describe('Invalid input types', () => {
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when first argument is a non-numeric string', () => {
       expect(() => add('yi', 8)).to.throw(TypeError)
     })
 
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when second argument is a non-numeric string', () => {
       expect(() => add(8, 'yi')).to.throw(TypeError)
     })
 
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when first argument is a numeric string', () => {
       expect(() => add('8', 9)).to.throw(TypeError)
     })
 
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when second argument is a numeric string', () => {
       expect(() => add(8, '9')).to.throw(TypeError)
     })
 

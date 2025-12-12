@@ -22,20 +22,20 @@ describe('divide', () => {
 
 
   describe('Invalid Inputs', () => {
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when first argument is a non-numeric string', () => {
       const result = divide('yi', 8)
       expect(result).to.throw(TypeError)
     })
 
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when second argument is a non-numeric string', () => {
       expect(divide(7, 'yi')).to.throw(TypeError)
     })
 
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when first argument is a numeric string', () => {
       expect(divide('10', 8)).to.throw(TypeError)
     })
 
-    it('should not handle string numbers', () => {
+    it('should throw TypeError when second argument is a numeric string', () => {
       expect(divide(9, '8')).to.throw(TypeError)
     })
   })
