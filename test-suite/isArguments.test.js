@@ -14,7 +14,7 @@ describe('isArguments', () => {
         })
     })
 
-    escribe('Negative Cases (Array-like objects)', () => {
+    describe('Negative Cases (Array-like objects)', () => {
         it('should return false for standard arrays', () => {
             expect(isArguments([1, 2, 3])).to.be.false
         })
@@ -26,7 +26,7 @@ describe('isArguments', () => {
         })
     })
 
-    escribe('Negative Cases (Primitives and others)', () => {
+    describe('Negative Cases (Primitives and others)', () => {
         it('should return false for plain objects', () => {
             expect(isArguments({ 'a': 1 })).to.be.false
         })
