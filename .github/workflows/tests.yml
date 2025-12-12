@@ -26,7 +26,9 @@ jobs:
         run: npm install
 
       - name: Run tests and Generate Coverage
-        run: npm run test:coverage
+        id: test_step
+        run: |
+          npm run test:coverage || echo "TESTS_FAILED=true" >> $GITHUB_ENV
 
       - name: Report to Coveralls
         if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
@@ -40,3 +42,7 @@ jobs:
         with:
           name: coverage-report
           path: coverage/
+
+      - name: Fail workflow if tests failed
+        if: env.TESTS_FAILED == 'true'
+        run: exit 1
