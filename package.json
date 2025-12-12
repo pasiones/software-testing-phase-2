@@ -5,6 +5,7 @@
     "coveralls": "^3.1.1",
     "mocha": "^11.7.5"
   },
+  "type": "module",
   "scripts": {
     "test": "mocha test-suite/*.test.js",
     "test:coverage": "c8 mocha test-suite/*.test.js",
